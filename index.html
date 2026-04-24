@@ -1,111 +1,132 @@
-
 <h1> Cadastro de Devs | Programador Web</h1>
-<form>
-  <fieldset> <!-- melhora a organização do formulário -->
 
-    <legend>Informações de Contato</legend> <!-- legenda do formulário -->
+<!-- FORMULÁRIO ÚNICO com action e method -->
+<form action="https://formsubmit.co/progweb.frontend@gmail.com" method="POST">
+  
+  <fieldset>
+    <legend>Informações de Contato</legend>
 
-    <label for="nome">Nome Completo:</label>  <!-- Onde fica o nome do campo -->
-<input type="text" id="nome" name="nome" maxlength="30" size="30" placeholder="Digite seu nome completo" oninput="this.value = this.value.replace(/[0-9]/g, '');"/>
+    <label for="nome">Nome Completo:</label>
+    <input type="text" id="nome" name="nome" maxlength="30" size="30" 
+           placeholder="Digite seu nome completo" 
+           oninput="this.value = this.value.replace(/[0-9]/g, '');"/>
     <br><br>
 
     <label for="email">Email:</label>
-    <input type="email" id="email" name="email" size="35" maxlength="35" placeholder="seuemail@email.com">
+    <input type="email" id="email" name="email" size="35" maxlength="35" 
+           placeholder="seuemail@email.com" required>
+    <br><br>
 
-    <label for="Celular">Celular: </label>
-    <input type="tel" id="tel" name="tel" placeholder="Ex:(00)99999-9999" size="18" maxlength="14"> <!--(00)99999-9999 --> <br><br>
+    <label for="tel">Celular:</label>
+    <input type="tel" id="tel" name="tel" placeholder="Ex:(00)99999-9999" 
+           size="18" maxlength="15">
+    <br><br>
 
-    <label for="endereco"> Endereço:</label>
-    <input type="text" id="endereco" placeholder="digite seu endereço aqui!" name="endereco" size="30" maxlength="30">
+    <label for="endereco">Endereço:</label>
+    <input type="text" id="endereco" placeholder="Digite seu endereço aqui!" 
+           name="endereco" size="30" maxlength="30">
 
     <label for="numero">Número:</label>
-    <input type="text" id="numero" name="numero" size="5" minlength="2" maxlength="5"> <br><br>
+    <input type="text" id="numero" name="numero" size="5" maxlength="5">
+    <br><br>
 
     <label for="bairro">Bairro:</label>
-    <input type="text" id="bairro" name="bairro" minlength="2" maxlength="14" size="14" placeholder="digite o bairro">
+    <input type="text" id="bairro" name="bairro" maxlength="14" size="14" 
+           placeholder="Digite o bairro">
 
     <label for="cidade">Cidade:</label>
-    <input type="text" id="cidade" name="cidade" minlength="2" maxlength="15" size="15" placeholder="digite a cidade"> <br><br>
+    <input type="text" id="cidade" name="cidade" maxlength="15" size="15" 
+           placeholder="Digite a cidade">
+    <br><br>
 
     <label for="estados">Estado:</label>
     <select id="estados" name="estados">
-    <option value="AC">Acre</option>
-    <option value="AL">Alagoas</option>
-    <option value="AP">Amapá</option>
-    <option value="AM">Amazonas</option>
-    <option value="BA">Bahia</option>
-    <option value="CE">Ceará</option>
-    <option value="DF">Distrito Federal</option>
-    <option value="ES">Espírito Santo</option>
-    <option value="GO">Goiás</option>
-    <option value="MA">Maranhão</option>
-    <option value="MT">Mato Grosso</option>
-    <option value="MS">Mato Grosso do Sul</option>
-    <option value="MG">Minas Gerais</option>
-    <option value="PA">Pará</option>
-    <option value="PB">Paraíba</option>
-    <option value="PR">Paraná</option>
-    <option value="PE">Pernambuco</option>
-    <option value="PI">Piauí</option>
-    <option value="RJ">Rio de Janeiro</option>
-    <option value="RN">Rio Grande do Norte</option>
-    <option value="RS">Rio Grande do Sul</option>
-    <option value="RO">Rondônia</option>
-    <option value="RR">Roraima</option>
-    <option value="SC">Santa Catarina</option>
-    <option value="SP">São Paulo</option>
-    <option value="SE">Sergipe</option>
-    <option value="TO">Tocantins</option>
-</select>
-  
+      <option value="AC">Acre</option>
+      <option value="AL">Alagoas</option>
+      <option value="AP">Amapá</option>
+      <option value="AM">Amazonas</option>
+      <option value="BA">Bahia</option>
+      <option value="CE">Ceará</option>
+      <option value="DF">Distrito Federal</option>
+      <option value="ES">Espírito Santo</option>
+      <option value="GO">Goiás</option>
+      <option value="MA">Maranhão</option>
+      <option value="MT">Mato Grosso</option>
+      <option value="MS">Mato Grosso do Sul</option>
+      <option value="MG">Minas Gerais</option>
+      <option value="PA">Pará</option>
+      <option value="PB">Paraíba</option>
+      <option value="PR">Paraná</option>
+      <option value="PE">Pernambuco</option>
+      <option value="PI">Piauí</option>
+      <option value="RJ">Rio de Janeiro</option>
+      <option value="RN">Rio Grande do Norte</option>
+      <option value="RS">Rio Grande do Sul</option>
+      <option value="RO">Rondônia</option>
+      <option value="RR">Roraima</option>
+      <option value="SC">Santa Catarina</option>
+      <option value="SP">São Paulo</option>
+      <option value="SE">Sergipe</option>
+      <option value="TO">Tocantins</option>
+    </select>
+
     <label for="cep">CEP:</label>
     <input type="text" id="cep" name="cep" placeholder="00000-000" 
-  maxlength="9" 
-  size="9"
-  oninput="this.value = this.value.replace(/[^0-9-]/g, '').replace(/^(\\d{5})(\\d)/, '$1-$2');">
+           maxlength="9" size="9"
+           oninput="this.value = this.value.replace(/[^0-9-]/g, '').replace(/^(\d{5})(\d)/, '$1-$2');">
   </fieldset>
+
   <fieldset>
     <legend>Experiência Profissional</legend>
-    <label for="devweb">Você é um desenvolvedor:</label>
+    
+    <label>Você é um desenvolvedor:</label><br>
     <label>
-      <input type="radio" name="devweb" id="devweb" value="Front-end" checked>Front-end
-     </label>
-     <label>
-      <input type="radio" name="devweb" id="devweb" value="Back-end"> Back-end
-      </label>
-      <label>
-      <input type="radio" name="devweb" id="devweb" value="Fullstack"> Fullstack
-      </label>
-      <br><br>
-    <label for="conhecimento"> Qual o seu nível de conhecimento? </label>  
+      <input type="radio" name="devweb" value="Front-end" checked> Front-end
+    </label>
+    <label>
+      <input type="radio" name="devweb" value="Back-end"> Back-end
+    </label>
+    <label>
+      <input type="radio" name="devweb" value="Fullstack"> Fullstack
+    </label>
+    <br><br>
+
+    <label for="conhecimento">Qual o seu nível de conhecimento?</label>
     <select name="conhecimento" id="conhecimento" required>
-<option selected disabled value="">Selecione:</option>
-<option>Júnior</option>
-<option>Pleno</option>
-<option>Sênior</option>
-<option>Especialista</option>
+      <option selected disabled value="">Selecione:</option>
+      <option>Júnior</option>
+      <option>Pleno</option>
+      <option>Sênior</option>
+      <option>Especialista</option>
     </select>
     <br><br>
-   <label>Selecione as tecnologias que utiliza:</label>
-   <br>
-   <input type="checkbox" name="tecnologia1" id="tecnologia1" value="HTML">
-   <label for="tecnologia1">HTML</label>
-<input type="checkbox" name="tecnologia2" id="tecnologia2" value="CSS">
-   <label for="tecnologia2">CSS</label>
-   <input type="checkbox" name="tecnologia3" id="tecnologia3" value="JavaScript">
-   <label for="tecnologia3">JavaScript</label>
-   <input type="checkbox" name="tecnologia4" id="tecnologia4" value="Python">
-   <label for="tecnologia4">Python</label>
-   <input type="checkbox" name="tecnologia5" id="tecnologia5" value="C#">
-   <label for="tecnologia5">C#</label>
-   <input type="checkbox" name="tecnologia6" id="tecnologia6" value="Java">
-   <label for="tecnologia6">Java</label>
-   <br><br>
-   <label for="experiencia">Conte um pouco mais de sua experiência:</label>
-   <br>
-   <textarea rows="6" style="width: 26em;" id="experiencia" name="experiencia"></textarea>   
+
+    <label>Selecione as tecnologias que utiliza:</label><br>
+    <input type="checkbox" name="tecnologia" id="tecnologia1" value="HTML">
+    <label for="tecnologia1">HTML</label>
+    
+    <input type="checkbox" name="tecnologia" id="tecnologia2" value="CSS">
+    <label for="tecnologia2">CSS</label>
+    
+    <input type="checkbox" name="tecnologia" id="tecnologia3" value="JavaScript">
+    <label for="tecnologia3">JavaScript</label>
+    
+    <input type="checkbox" name="tecnologia" id="tecnologia4" value="Python">
+    <label for="tecnologia4">Python</label>
+    
+    <input type="checkbox" name="tecnologia" id="tecnologia5" value="C#">
+    <label for="tecnologia5">C#</label>
+    
+    <input type="checkbox" name="tecnologia" id="tecnologia6" value="Java">
+    <label for="tecnologia6">Java</label>
+    <br><br>
+
+    <label for="experiencia">Conte um pouco mais de sua experiência:</label><br>
+    <textarea rows="6" style="width: 26em;" id="experiencia" name="experiencia"></textarea>
   </fieldset>
-  <button type="reset" onsubmit="">Limpar</button>
-  <button type="submit" onsubmit="">Enviar Dados</button>
+
+  <!-- Botões dentro do mesmo formulário -->
+  <button type="reset">Limpar</button>
+  <button type="submit">Enviar</button>
 
 </form>
